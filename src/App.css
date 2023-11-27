@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins' , sans-serif;
+}
+.app{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right top, #dc143c, #a30e50, #631c4c, #2b1932, #020202);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+  box-shadow: 0px 0px 10px 3px rgb(255, 255, 255);
+}
+.app1{
+  width: 46%;
+  height: 95%;
+  border: 3px solid rgb(82, 221, 18);
+}
+.board{
+  width: 95%;
+  height: 50%;
+  margin: auto;
+  margin-top: 15px;
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.app2{
+  width: 46%;
+  height: 95%;
+  /* border: 2px solid white; */
+  box-shadow: 0px 0px 8px 1px rgb(255, 255, 255);
+}
+.app2-input-div{
+  width: 90%;
+  height: 20%;
+  margin: auto;
+}
+form{
+  width: 100%;
+  height: 100%;
+}
+.input12-div{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  /* border: 1px solid red; */
+}
+.input1{
+  width: 48%;
+  height: 45%;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  box-shadow: 0px 0px 8px -1px rgba(255,255,255,1);
+}
+.input2{
+  width: 48%;
+  height: 45%;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  box-shadow: 0px 0px 8px -1px rgba(255,255,255,1);
+}
+.input3-button-div{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  /* border: 1px solid rgb(0, 255, 234); */
+}
+.input3{
+  width: 76%;
+  height: 45%;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  box-shadow: 0px 0px 8px -1px rgba(255,255,255,1);
+}
+.input1:focus , .input2:focus , .input3:focus{
+  box-shadow: 0px 0px 18px -1px rgb(255, 112, 112);
+  transition: 0.5s;
+}
+.button-add{
+  width: 20%;
+  height: 46%;
+  border-radius: 20px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.button-add:hover{
+  box-shadow: 0px 0px 12px -1px rgba(255,255,255,1);
+  color: rgba(220,20,60);
+  transition: 0.5s;
+}
+.button-add:active{
+  transform: scale(0.8);
+}
+.list{
+  border-top: 1px solid white;
+  overflow-y: auto;
+  width: 90%;
+  height: 80%;
+  margin: auto;
+}
+::-webkit-scrollbar {
+  width: 10px; 
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(220, 20, 60,0.6); 
+  border-radius: 6px; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(220, 20, 60,0.9); 
+}
+::-webkit-scrollbar-track {
+  background-color:none;
+
+}
+.list ul li{
+  width: 98%;
+  height: 2.7rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+.list ul li:hover{
+  box-shadow: 0px 0px 12px -1px rgba(255,255,255,1);
+  transition: 0.5s;
+}
+.list ul li p{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.check-icon, .trash-icon{
+  font-size: 17px;
+  cursor: pointer;
+}
+.check-icon {
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.check-icon.completed {
+  color: #00ff00; /* Yeşil renk */
+}
+
+.check-icon:hover{
+  color: green;
+  transition: 0.2s;
+}
+.trash-icon:hover{
+  color: red;
+  transition: 0.2s;
+}
