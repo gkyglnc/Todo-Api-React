@@ -6,6 +6,7 @@ import axios from 'axios';
 import './App.css';
 
 function App() {
+  const [showCompleted, setShowCompleted] = useState(null);
   const [apidata, setApidata] = useState([]);
   const [newTodo, setNewTodo] = useState({
     name: '',
@@ -88,6 +89,14 @@ function App() {
     return (uncompletedCount / totalCount) * 100;
   };
 
+  const filteredData = apidata.filter((todo) => {
+    if (showCompleted === null) {
+      return true;
+    } else {
+      return todo.completed === showCompleted;
+    }
+  });
+ console.log(apidata)
   return (
     <>
       <div className="app">
@@ -117,6 +126,29 @@ function App() {
                 <p>Remaining work</p>
               </div>
             </div>
+            <div className="space-border"></div>
+            <div className="true-false-list-div">
+              <div className='true-false-filter-btn'>
+              <button className={`true-list ${showCompleted === true ? 'active' : ''}`}
+                onClick={() => setShowCompleted(true)}>True</button>
+              <button className={`false-list ${showCompleted === false ? 'active' : ''}`}
+                onClick={() => setShowCompleted(false)}>False</button>
+
+              </div>
+              <div className='list-1'>
+              {filteredData.map((todo , i) =>(
+              <ul>
+                <li key={i}>
+                  <p className='p1'>{todo.name}</p>
+                  <p className='p2'>{todo.title}</p>
+                </li>
+              </ul>
+              ))}
+              </div>
+            </div> 
+
+
+            
           </div>
 
           <div className="app2">
@@ -159,8 +191,11 @@ function App() {
               {apidata.map((todo, i) => (
                 <ul key={i}>
                   <li>
-                    <p>
-                      {todo.name} | {todo.title}{' '}
+                    <p className='p1'>
+                      {todo.name} 
+                    </p>
+                    <p className='p2-2'>
+                      {todo.title}{' '}
                     </p>
                     <FaCheck
                       onClick={() => handleCompleteToggle(todo.id)}

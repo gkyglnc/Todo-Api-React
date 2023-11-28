@@ -26,7 +26,7 @@
 .app1{
   width: 46%;
   height: 95%;
-  border: 3px solid rgb(82, 221, 18);
+  box-shadow: 0px 0px 8px 1px rgb(255, 255, 255);
 }
 .board{
   width: 95%;
@@ -67,7 +67,6 @@
   margin: auto;
   display: flex;
   justify-content: space-evenly;
-  /* border: 1px solid rgb(21, 255, 0); */
 }
 .progres-bar-text{
   width: 40%;
@@ -77,12 +76,88 @@
   color: white;
   border-bottom: 1px solid white;
   text-shadow: 3px 1px 2px rgba(255,255,255,0.6);
-  /* border: 1px solid paleturquoise; */
+}
+.space-border{
+  border-bottom: 1px solid white;
+  width: 95%;
+  margin: auto;
+  height: 1%;
+}
+.true-false-list-div{
+  width: 90%;
+  height: 62%;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+.true-false-filter-btn{
+  width: 100%;
+  height: 10%;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.true-false-filter-btn button{
+  width: 35%;
+  height: 90%;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.true-false-filter-btn button:hover{
+  box-shadow: 0px 0px 12px -1px rgba(255,255,255,1);
+  color: rgba(220,20,60);
+  transition: 0.5s;
 }
 
 
 
+.list-1{
+  /* border-top: 1px solid white; */
+  overflow-y: auto;
+  width: 90%;
+  height: 80%;
+  margin: auto;
+}
+.list-1 ul li{
+  width: 98%;
+  height: 2.7rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+.list-1 ul li:hover{
+  box-shadow: 0px 0px 12px -1px rgba(255,255,255,1);
+  transition: 0.5s;
+}
+.list-1 ul li p{
+  /* width: 50%;
+  height: 100%; */
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.p1{
+  width: 20%;
+  /* border: 1px solid red; */
+}
+.p2{
+  /* border: 1px solid red; */
+  width: 70%;
+}
+.p2-2{
+  width: 60%;
+  /* border: 1px solid red; */
 
+}
 
 
 
@@ -209,8 +284,8 @@ form{
   transition: 0.5s;
 }
 .list ul li p{
-  width: 80%;
-  height: 100%;
+  /* width: 80%;
+  height: 100%; */
   display: flex;
   align-items: center;
   margin-left: 10px;
